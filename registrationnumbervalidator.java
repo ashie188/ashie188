@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+public import java.util.ArrayList;
 import java.util.List;
 
 public class RegistrationNumberValidator {
@@ -12,9 +12,7 @@ public class RegistrationNumberValidator {
             String department = regNumber.substring(4, 7);
             String sequence = regNumber.substring(7);
 
-            
-            int sequenceNumber = Integer.parseInt(sequence);
-            if (sequenceNumber < 50 && validDepartments.contains(department)) {
+            if (validDepartments.contains(department)) {
                 validCount++;
             }
         }
@@ -29,9 +27,10 @@ public class RegistrationNumberValidator {
         registrationNumbers.add("2022CHEN003");
         registrationNumbers.add("2023ELEC004");
         registrationNumbers.add("2023MECH005");
-        registrationNumbers.add("2023MECH052");
 
         int result = countValidRegistrationNumbers(registrationNumbers);
         System.out.println("Number of valid registration numbers: " + result);
     }
+} {
+    
 }
